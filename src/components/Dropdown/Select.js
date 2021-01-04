@@ -4,6 +4,8 @@ import ArrowIcon from './ArrowIcon'
 
 
 const SelectContainer = styled.div`
+    box-sizing: border-box;
+
     padding: 8px 16px 8px 16px;
     /* height: 40px; */
     display: flex;
@@ -23,13 +25,15 @@ const SelectContainer = styled.div`
         display: flex;
         align-items: center;
         color: #303030;
-        border: 1px dotted dodgerblue;
+        /* border: 1px dotted dodgerblue; */
     }
 `
 
-export default function Select() {
+export default function Select(props) {
+    const { handleSelect } = props
+
     return (
-        <SelectContainer>
+        <SelectContainer onClick={handleSelect}>
             <p>{'Select a state...'}</p>
             <ArrowIcon iconStatus={'down'} />
         </SelectContainer>

@@ -9,12 +9,11 @@ const IconContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px dotted dodgerblue;    
+    /* border: 1px dotted dodgerblue;     */
 `
 
 export default function ArrowIcon(props) {
     const { iconStatus } = props
-    console.log(iconStatus)
 
     function setIcon(status) {
         if (status === 'down') {

@@ -27,7 +27,7 @@ export default function Dropdown() {
     return (
         <DropdownContainer>
             <p>{'Select a state...'}</p>
-            <ArrowIcon />
+            <ArrowIcon iconStatus={'down'} />
         </DropdownContainer>
     )
 }

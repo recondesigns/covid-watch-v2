@@ -30,11 +30,11 @@ const SelectContainer = styled.div`
 `
 
 export default function Select(props) {
-    const { handleSelect } = props
+    const { handleClick, placeholder } = props
 
     return (
-        <SelectContainer onClick={handleSelect}>
-            <p>{'Select a state...'}</p>
+        <SelectContainer onClick={handleClick}>
+            <p>{placeholder}</p>
             <ArrowIcon iconStatus={'down'} />
         </SelectContainer>
     )

@@ -4,22 +4,18 @@ import Select from './Select'
 import Options from './Options'
 
 const DropdownContainer = styled.div`
+    margin: 0px 0px 16px 0px;
     box-sizing: border-box;
-    width: 328px;
-
     /* border: 2px dashed purple; */
 `
 
-export default function Dropdown() {
-
-    function handleSelect() {
-        alert('fired')
-    }
+export default function Dropdown(props) {
+    const { handleClick, placeholder } = props
 
     return (
         <DropdownContainer>
-            <Select handleSelect={() => handleSelect()} />
-            <Options openStatus={'open'} />
+            <Select handleClick={handleClick} placeholder={placeholder} />
+            <Options openStatus={'closed'} />
         </DropdownContainer>
     )
 }

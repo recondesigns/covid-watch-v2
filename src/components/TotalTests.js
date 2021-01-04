@@ -2,12 +2,18 @@ import React from 'react'
 import styled from 'styled-components'
 
 const TestsContainer = styled.div`
+    box-sizing: border-box;
     margin: 0px;
-    border: 1px dashed orange;
+    width: 328px;
+    position: absolute;
+    top: 248px;
+    left: calc(50% - 328px/2);
+    /* border: 1px dashed orange; */
 
     & > h3 {
+        box-sizing: border-box;
         margin: 0px;
-        width: 328px;
+        /* width: 328px; */
         height: 32px;
         font-family: Open Sans;
         font-style: normal;
@@ -18,11 +24,12 @@ const TestsContainer = styled.div`
         justify-content: center;
         align-items: center;
         color: #303030;
-        border: 1px dotted dodgerblue;
+        /* border: 1px dotted dodgerblue; */
     }
 
     & > h2 {
-        margin: 0px;
+        box-sizing: border-box;
+        margin: 16px 0px 8px 0px;
         font-family: Open Sans;
         font-style: normal;
         font-weight: 600;
@@ -32,12 +39,13 @@ const TestsContainer = styled.div`
         justify-content: center;
         align-items: center;
         color: #303030;
-        border: 1px dotted dodgerblue;
+        /* border: 1px dotted dodgerblue; */
     }
 
     & > p {
+        box-sizing: border-box;
         margin: 0px;
-        width: 328px;
+        /* width: 328px; */
         height: 16px;
         font-family: Open Sans;
         font-style: normal;
@@ -45,10 +53,10 @@ const TestsContainer = styled.div`
         font-size: 16px;
         line-height: 16px;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
         color: #303030;
-        border: 1px dotted dodgerblue;
+        /* border: 1px dotted dodgerblue; */
     }
 `
 

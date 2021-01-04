@@ -4,7 +4,6 @@ import styled from 'styled-components'
 const BlockContainer = styled.div`
     box-sizing: border-box;
     width: 120px;
-    border: 1px dashed orange;
 
     & > h5 {
         box-sizing: border-box;
@@ -20,12 +19,12 @@ const BlockContainer = styled.div`
         align-items: center;
         color: #303030;
         text-transform: uppercase;
-        border: 1px dotted dodgerblue;
+        /* border: 1px dotted dodgerblue; */
     }
 
     & > h4 {
         box-sizing: border-box;
-        margin: 0px;
+        margin: 8px 0px 4px 0px;
         font-family: Open Sans;
         font-style: normal;
         font-weight: 600;
@@ -34,7 +33,7 @@ const BlockContainer = styled.div`
         display: flex;
         align-items: center;
         color: #303030;
-        border: 1px dotted dodgerblue;
+        /* border: 1px dotted dodgerblue; */
     }
 
     & > p {
@@ -48,7 +47,7 @@ const BlockContainer = styled.div`
         display: flex;
         align-items: center;
         color: #303030;
-        border: 1px dotted dodgerblue;
+        /* border: 1px dotted dodgerblue; */
     }
 `
 

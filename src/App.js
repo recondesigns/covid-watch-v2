@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import LocationHeading from './components/LocationHeading'
 import TotalTests from './components/TotalTests'
 import InfoBlock from './components/InfoBlock'
+import { Dropdown } from './components/Dropdown'
 
 const AppContainer = styled.div`
   box-sizing: border-box;
@@ -46,6 +47,8 @@ function App() {
         <InfoBlock label={'Label'} number={'999,888,999'} numberChange={'999,999,000'} />
         <InfoBlock label={'Label'} number={'999,888,999'} numberChange={'999,999,000'} />
       </div>
+
+      <Dropdown />
 
     </AppContainer>
   )

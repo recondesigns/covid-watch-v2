@@ -1,65 +1,65 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const TestsContainer = styled.div`
-    margin: 0px;
+const BlockContainer = styled.div`
+    box-sizing: border-box;
+    width: 120px;
     border: 1px dashed orange;
 
-    & > h3 {
+    & > h5 {
+        box-sizing: border-box;
         margin: 0px;
-        width: 328px;
-        height: 32px;
+        width: 100%;
+        height: 16px;
         font-family: Open Sans;
         font-style: normal;
         font-weight: 600;
-        font-size: 24px;
-        line-height: 32px;
+        font-size: 16px;
+        line-height: 16px;
         display: flex;
-        justify-content: center;
         align-items: center;
         color: #303030;
+        text-transform: uppercase;
         border: 1px dotted dodgerblue;
     }
 
-    & > h2 {
+    & > h4 {
+        box-sizing: border-box;
         margin: 0px;
         font-family: Open Sans;
         font-style: normal;
         font-weight: 600;
-        font-size: 48px;
-        line-height: 48px;
+        font-size: 20px;
+        line-height: 24px;
         display: flex;
-        justify-content: center;
         align-items: center;
         color: #303030;
         border: 1px dotted dodgerblue;
     }
 
     & > p {
+        box-sizing: border-box;
         margin: 0px;
-        width: 328px;
-        height: 16px;
         font-family: Open Sans;
         font-style: normal;
         font-weight: 300;
-        font-size: 16px;
-        line-height: 16px;
+        font-size: 14px;
+        line-height: 14px;
         display: flex;
-        justify-content: flex-end;
         align-items: center;
         color: #303030;
         border: 1px dotted dodgerblue;
     }
 `
 
-export default function TotalTests(props) {
-    const { number, numberChange } = props
+export default function InfoBlock(props) {
+    const { label, number, numberChange } = props
 
     return (
-        <TestsContainer>
-            <h3>{'Total positive viral tests'}</h3>
-            <h2>{number}</h2>
+        <BlockContainer>
+            <h5>{label}</h5>
+            <h4>{number}</h4>
             <p>{`+ ${numberChange}`}</p>
-        </TestsContainer>
+        </BlockContainer>
     )
 }

@@ -14,7 +14,7 @@ export default function Dropdown(props) {
     return (
         <DropdownContainer>
             <Select handleClick={handleClick} placeholder={placeholder} />
-            <Options openStatus={'closed'} />
+            <Options openStatus={'open'} />
         </DropdownContainer>
     )
 }

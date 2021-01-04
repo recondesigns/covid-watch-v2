@@ -60,9 +60,9 @@ function App() {
     alert('State dropdown fired')
   }
 
-  function handleCountyDropdown() {
-    alert('County dropdown fired')
-  }
+  // function handleCountyDropdown() {
+  //   alert('County dropdown fired')
+  // }
 
   return (
     <AppContainer>
@@ -82,7 +82,7 @@ function App() {
 
       <div className={'dropdown-wrapper'}>
         <Dropdown handleClick={() => handleStateDropdown()} placeholder={'Select a state...'} />
-        <Dropdown handleClick={() => handleCountyDropdown()} placeholder={'Select a county...'} />
+        {/* <Dropdown handleClick={() => handleCountyDropdown()} placeholder={'Select a county...'} /> */}
       </div>
 
     </AppContainer>

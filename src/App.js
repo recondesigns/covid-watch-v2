@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Header } from './components/Header'
 import LocationHeading from './components/LocationHeading'
 import TotalTests from './components/TotalTests'
 import InfoBlock from './components/InfoBlock'
@@ -12,7 +13,7 @@ const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   
   & > h1 {
     margin: 0px;
@@ -33,6 +34,7 @@ const AppContainer = styled.div`
 function App() {
   return (
     <AppContainer>
+      <Header />
       {/* <h3>Coming soon...</h3>
       <h1>Covid Watch v2.0</h1> */}
       <LocationHeading headingText={'Salt Lake County, Utah'} />

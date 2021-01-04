@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import menuIcon from '../../assets/icons/menu-icon.svg'
 import userIcon from '../../assets/icons/user-icon.svg'
 
-
 const HeaderContainer = styled.div`
     box-sizing: border-box;
     width: 100%;
@@ -11,7 +10,6 @@ const HeaderContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px dotted lightcoral; */
 
     & > .menu-icon-container {
         margin: 0px 16px 0px 16px;

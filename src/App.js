@@ -19,7 +19,6 @@ const AppContainer = styled.div`
     left: calc(50% - 280px/2);
     display: flex;
     justify-content: space-between;
-    /* border: 1px dashed orange; */
 
     @media (min-width: 768px) {
       width: 400px;
@@ -35,7 +34,6 @@ const AppContainer = styled.div`
     left: calc(50% - 280px/2);
     display: flex;
     justify-content: space-between;
-    /* border: 1px dashed green; */
 
     @media (min-width: 768px) {
       width: 400px;
@@ -49,7 +47,6 @@ const AppContainer = styled.div`
     position: absolute;
     top: 656px;
     left: calc(50% - 328px/2);
-    /* border: 1px dashed black; */
 
     @media (min-width: 768px) {
       top: 664px;

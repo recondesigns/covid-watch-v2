@@ -2,12 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import ArrowIcon from './ArrowIcon'
 
-
 const SelectContainer = styled.div`
     box-sizing: border-box;
-
     padding: 8px 16px 8px 16px;
-    /* height: 40px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,7 +22,6 @@ const SelectContainer = styled.div`
         display: flex;
         align-items: center;
         color: #303030;
-        /* border: 1px dotted dodgerblue; */
     }
 `
 

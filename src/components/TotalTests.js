@@ -8,7 +8,6 @@ const TestsContainer = styled.div`
     position: absolute;
     top: 248px;
     left: calc(50% - 328px/2);
-    /* border: 1px dashed orange; */
 
     @media (min-width: 768px) {
         width: 400px;
@@ -16,11 +15,9 @@ const TestsContainer = styled.div`
         left: calc(50% - 400px/2);
     }
 
-
     & > h3 {
         box-sizing: border-box;
         margin: 0px;
-        /* width: 328px; */
         height: 32px;
         font-family: Open Sans;
         font-style: normal;
@@ -31,7 +28,6 @@ const TestsContainer = styled.div`
         justify-content: center;
         align-items: center;
         color: #303030;
-        /* border: 1px dotted dodgerblue; */
 
         @media (min-width: 768px) {
             width: 400px;
@@ -51,7 +47,6 @@ const TestsContainer = styled.div`
         justify-content: center;
         align-items: center;
         color: #303030;
-        /* border: 1px dotted dodgerblue; */
 
         @media (min-width: 768px) {
             font-size: 64px;
@@ -63,7 +58,6 @@ const TestsContainer = styled.div`
     & > p {
         box-sizing: border-box;
         margin: 0px;
-        /* width: 328px; */
         height: 16px;
         font-family: Open Sans;
         font-style: normal;
@@ -74,7 +68,6 @@ const TestsContainer = styled.div`
         justify-content: center;
         align-items: center;
         color: #303030;
-        /* border: 1px dotted dodgerblue; */
 
         @media (min-width: 768px) {
             font-size: 18px;

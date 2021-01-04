@@ -23,7 +23,6 @@ const BlockContainer = styled.div`
         align-items: center;
         color: #303030;
         text-transform: uppercase;
-        /* border: 1px dotted dodgerblue; */
 
         @media (min-width: 768px) {
             font-size: 20px;
@@ -42,7 +41,6 @@ const BlockContainer = styled.div`
         display: flex;
         align-items: center;
         color: #303030;
-        /* border: 1px dotted dodgerblue; */
 
         @media (min-width: 768px) {
             font-size: 24px;
@@ -61,7 +59,6 @@ const BlockContainer = styled.div`
         display: flex;
         align-items: center;
         color: #303030;
-        /* border: 1px dotted dodgerblue; */
 
         @media (min-width: 768px) {
             font-size: 16px;

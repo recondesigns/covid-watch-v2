@@ -15,7 +15,6 @@ const StyledH1 = styled.h1`
     line-height: 40px;
     text-align: center;
     color: #303030;
-    /* border: 1px dotted dodgerblue; */
 
     @media (min-width: 768px) {
         width: 400px;

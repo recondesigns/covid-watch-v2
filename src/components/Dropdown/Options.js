@@ -6,7 +6,6 @@ const OptionsContainer = styled.ul`
     padding: 0px 0px 0px 0px;
     width: 328px;
     display: ${props => props.display};
-    /* display: block; */
     background: #FFFFFF;
     border: 2px solid #303030;
     box-sizing: border-box;
@@ -14,7 +13,6 @@ const OptionsContainer = styled.ul`
 
     & > li {
         box-sizing: border-box;
-
         margin: 4px 0px 4px 0px;
         padding: 0px 16px 0px 16px;
         height: 24px;
@@ -28,7 +26,6 @@ const OptionsContainer = styled.ul`
         color: #808080;
         background: #FFFFFF;
         list-style-type: none;
-        /* border: 1px dotted dodgerblue; */
 
         &:hover {
             background: #E6E6E6;
@@ -39,7 +36,6 @@ const OptionsContainer = styled.ul`
 
 export default function Options(props) {
     const { openStatus } = props
-    console.log(openStatus)
 
     function setOptionsDisplay(status) {
         if (status === 'closed') {

@@ -4,20 +4,21 @@ import axios from 'axios'
 export const DataContext = React.createContext()
 
 export default function Data({ children }) {
-    const [statesData, setStatesData] = useState('No data.')
+    const [statesData, setStatesData] = useState(null)
 
     useEffect(() => {
         let apiUrl = 'https://api.covidtracking.com/v1/states/current.json'
 
-        setStatesData(() => {
-            return 'Loading...'
-        })
+        // setStatesData(() => {
+        //     return 'Loading...'
+        // })
 
         axios.get(apiUrl).then((res) => {
-            // console.log(res.data)
+
             setStatesData(() => {
                 return [...res.data]
             })
+
         })
 
     }, [])

@@ -5,8 +5,10 @@ const OptionsContainer = styled.ul`
     margin: 4px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
     width: 328px;
+    height: 144px;
     display: ${props => props.display};
     background: #FFFFFF;
+    overflow: scroll;
     border: 2px solid #303030;
     box-sizing: border-box;
     box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -35,7 +37,13 @@ const OptionsContainer = styled.ul`
 `
 
 export default function Options(props) {
-    const { openStatus } = props
+    const { openStatus, list } = props
+
+    let itemList = list.map((stateAbbr) => {
+        console.log(stateAbbr)
+        return <li key={stateAbbr} value={stateAbbr}>{stateAbbr}</li>
+    })
+    console.log(itemList)
 
     function setOptionsDisplay(status) {
         if (status === 'closed') {
@@ -49,12 +57,13 @@ export default function Options(props) {
 
     return (
         <OptionsContainer display={displayValue}>
-            <li>Utah</li>
+            {itemList}
+            {/* <li>Utah</li>
             <li>Texas</li>
             <li>Utah</li>
             <li>Texas</li>
             <li>Utah</li>
-            <li>Texas</li>
+            <li>Texas</li> */}
         </OptionsContainer>
     )
 }

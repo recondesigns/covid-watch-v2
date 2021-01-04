@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
+import { DataContext } from './providers/Data'
 import { Header } from './components/Header'
 import LocationHeading from './components/LocationHeading'
 import TotalTests from './components/TotalTests'
@@ -55,9 +56,19 @@ const AppContainer = styled.div`
 `
 
 function App() {
+  const [statesData] = useContext(DataContext)
+
+  const list = []
+
+  if (statesData !== null) {
+    statesData.forEach((stateEntry) => {
+      const { state } = stateEntry
+      list.push(state)
+    })
+  }
 
   function handleStateDropdown() {
-    alert('State dropdown fired')
+    alert('fired')
   }
 
   // function handleCountyDropdown() {
@@ -81,7 +92,7 @@ function App() {
       </div>
 
       <div className={'dropdown-wrapper'}>
-        <Dropdown handleClick={() => handleStateDropdown()} placeholder={'Select a state...'} />
+        <Dropdown handleClick={() => handleStateDropdown()} placeholder={'Select a state...'} list={list} />
         {/* <Dropdown handleClick={() => handleCountyDropdown()} placeholder={'Select a county...'} /> */}
       </div>
 

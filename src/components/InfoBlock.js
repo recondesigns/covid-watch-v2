@@ -5,11 +5,15 @@ const BlockContainer = styled.div`
     box-sizing: border-box;
     width: 120px;
 
+    @media (min-width: 768px) {
+        width: 152px;
+    }
+
     & > h5 {
         box-sizing: border-box;
         margin: 0px;
         width: 100%;
-        height: 16px;
+        height: 24px;
         font-family: Open Sans;
         font-style: normal;
         font-weight: 600;
@@ -20,6 +24,11 @@ const BlockContainer = styled.div`
         color: #303030;
         text-transform: uppercase;
         /* border: 1px dotted dodgerblue; */
+
+        @media (min-width: 768px) {
+            font-size: 20px;
+            line-height: 24px;
+        }
     }
 
     & > h4 {
@@ -34,6 +43,11 @@ const BlockContainer = styled.div`
         align-items: center;
         color: #303030;
         /* border: 1px dotted dodgerblue; */
+
+        @media (min-width: 768px) {
+            font-size: 24px;
+            margin: 8px 0px 8px 0px;
+        }
     }
 
     & > p {
@@ -48,6 +62,11 @@ const BlockContainer = styled.div`
         align-items: center;
         color: #303030;
         /* border: 1px dotted dodgerblue; */
+
+        @media (min-width: 768px) {
+            font-size: 16px;
+            line-height: 16px;
+        }
     }
 `
 

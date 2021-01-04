@@ -20,6 +20,12 @@ const AppContainer = styled.div`
     display: flex;
     justify-content: space-between;
     /* border: 1px dashed orange; */
+
+    @media (min-width: 768px) {
+      width: 400px;
+      top: 464px;
+      left: calc(50% - 400px/2);
+    }
   }
 
   & > .row-wrapper-two {
@@ -30,6 +36,12 @@ const AppContainer = styled.div`
     display: flex;
     justify-content: space-between;
     /* border: 1px dashed green; */
+
+    @media (min-width: 768px) {
+      width: 400px;
+      top: 560px;
+      left: calc(50% - 400px/2);
+    }
   }
 
   & > .dropdown-wrapper {
@@ -38,6 +50,10 @@ const AppContainer = styled.div`
     top: 656px;
     left: calc(50% - 328px/2);
     /* border: 1px dashed black; */
+
+    @media (min-width: 768px) {
+      top: 664px;
+    }
   }
 `
 

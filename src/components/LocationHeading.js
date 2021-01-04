@@ -16,6 +16,14 @@ const StyledH1 = styled.h1`
     text-align: center;
     color: #303030;
     /* border: 1px dotted dodgerblue; */
+
+    @media (min-width: 768px) {
+        width: 400px;
+        position: absolute;
+        top: 144px;
+        left: calc(50% - 400px/2);
+        font-size: 40px;
+    }
 `
 
 export default function LocationHeading(props) {

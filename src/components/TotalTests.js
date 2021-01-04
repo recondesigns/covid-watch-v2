@@ -10,6 +10,13 @@ const TestsContainer = styled.div`
     left: calc(50% - 328px/2);
     /* border: 1px dashed orange; */
 
+    @media (min-width: 768px) {
+        width: 400px;
+        top: 280px;
+        left: calc(50% - 400px/2);
+    }
+
+
     & > h3 {
         box-sizing: border-box;
         margin: 0px;
@@ -25,6 +32,11 @@ const TestsContainer = styled.div`
         align-items: center;
         color: #303030;
         /* border: 1px dotted dodgerblue; */
+
+        @media (min-width: 768px) {
+            width: 400px;
+            font-size: 32px;
+        }
     }
 
     & > h2 {
@@ -40,6 +52,12 @@ const TestsContainer = styled.div`
         align-items: center;
         color: #303030;
         /* border: 1px dotted dodgerblue; */
+
+        @media (min-width: 768px) {
+            font-size: 64px;
+            line-height: 64px;
+            margin: 24px 0px 8px 0px;
+        }
     }
 
     & > p {
@@ -57,6 +75,11 @@ const TestsContainer = styled.div`
         align-items: center;
         color: #303030;
         /* border: 1px dotted dodgerblue; */
+
+        @media (min-width: 768px) {
+            font-size: 18px;
+            line-height: 24px;
+        }
     }
 `
 

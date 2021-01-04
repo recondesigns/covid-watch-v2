@@ -2,6 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledH1 = styled.h1`
+    margin: 0px;
+    width: 328px;
+    height: 80px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    color: #303030;
     border: 1px dotted dodgerblue;
 `
 

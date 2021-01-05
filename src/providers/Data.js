@@ -9,18 +9,11 @@ export default function Data({ children }) {
     useEffect(() => {
         let apiUrl = 'https://api.covidtracking.com/v1/states/current.json'
 
-        // setStatesData(() => {
-        //     return 'Loading...'
-        // })
-
         axios.get(apiUrl).then((res) => {
-
             setStatesData(() => {
                 return [...res.data]
             })
-
         })
-
     }, [])
 
     return (

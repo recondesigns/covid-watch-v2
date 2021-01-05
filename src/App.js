@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
 // import { DataContext } from './providers/Data'
-// import { AppStateContext } from './providers/AppState'
+import { AppStateContext } from './providers/AppState'
 import { Header } from './components/Header'
 import LocationHeading from './components/LocationHeading'
 import TotalTests from './components/TotalTests'
@@ -57,16 +57,13 @@ const AppContainer = styled.div`
 `
 
 function App() {
-  
-  // const [statesData] = useContext(DataContext)
-  // console.log(useContext(AppStateContext))
-  // console.log(useContext(DataContext))
+  const [selectedState] = useContext(AppStateContext)
 
   return (
     <AppContainer>
       <Header />
-      <LocationHeading headingText={'Salt Lake County, Utah'} />
-      <TotalTests number={'999,888,999'} numberChange={'999,888,999'} />
+      <LocationHeading headingText={(selectedState === null) ? 'Select a state...' : selectedState.state} />
+      <TotalTests number={(selectedState === null) ? '0' : selectedState.positiveCasesViral} numberChange={(selectedState === null) ? '0' : selectedState.positiveIncrease} />
       
       <div className={'row-wrapper-one'}>
         <InfoBlock label={'Label'} number={'999,888,999'} numberChange={'999,999,000'} />

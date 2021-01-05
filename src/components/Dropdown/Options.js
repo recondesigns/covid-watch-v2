@@ -38,7 +38,7 @@ const OptionsContainer = styled.ul`
 `
 
 export default function Options(props) {
-    const { openStatus } = props
+    const { openStatus, onClick } = props
     const [statesData] = useContext(DataContext)
 
     const list = []
@@ -57,16 +57,11 @@ export default function Options(props) {
         }
     }
 
-    function handleClick(e) {
-        
-        console.log(e.target.id)
-    }
-
     let displayValue = setOptionsDisplay(openStatus)
 
     return (
         <OptionsContainer display={displayValue}>
-            {list.map((stateAbbr) => <li key={stateAbbr} id={stateAbbr} onClick={(e) => handleClick(e)}>{stateAbbr}</li>)}
+            {list.map((stateAbbr) => <li key={stateAbbr} id={stateAbbr} onClick={onClick}>{stateAbbr}</li>)}
         </OptionsContainer>
     )
 }

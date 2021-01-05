@@ -57,11 +57,16 @@ export default function Options(props) {
         }
     }
 
+    function handleClick(e) {
+        
+        console.log(e.target.id)
+    }
+
     let displayValue = setOptionsDisplay(openStatus)
 
     return (
         <OptionsContainer display={displayValue}>
-            {list.map((stateAbbr) => <li key={stateAbbr} value={stateAbbr}>{stateAbbr}</li>)}
+            {list.map((stateAbbr) => <li key={stateAbbr} id={stateAbbr} onClick={(e) => handleClick(e)}>{stateAbbr}</li>)}
         </OptionsContainer>
     )
 }

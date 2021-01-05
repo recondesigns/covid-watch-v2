@@ -26,12 +26,22 @@ const SelectContainer = styled.div`
 `
 
 export default function Select(props) {
-    const { handleClick, placeholder } = props
+    const { placeholder, onClick, iconStatus } = props
+
+    function setIcon(status) {
+        if (status === 'closed') {
+            return 'down'
+        } else if (status === 'open') {
+            return 'up'
+        }
+    }
+
+    let correctIcon = setIcon(iconStatus)
 
     return (
-        <SelectContainer onClick={handleClick}>
+        <SelectContainer onClick={onClick}>
             <p>{placeholder}</p>
-            <ArrowIcon iconStatus={'down'} />
+            <ArrowIcon iconStatus={correctIcon} />
         </SelectContainer>
     )
 }

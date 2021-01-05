@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
-import { DataContext } from './providers/Data'
-import { AppStateContext } from './providers/AppState'
+// import { DataContext } from './providers/Data'
+// import { AppStateContext } from './providers/AppState'
 import { Header } from './components/Header'
 import LocationHeading from './components/LocationHeading'
 import TotalTests from './components/TotalTests'
@@ -58,19 +58,9 @@ const AppContainer = styled.div`
 
 function App() {
   
-  const [statesData] = useContext(DataContext)
+  // const [statesData] = useContext(DataContext)
   // console.log(useContext(AppStateContext))
   // console.log(useContext(DataContext))
-
-
-  const list = []
-
-  if (statesData !== null) {
-    statesData.forEach((stateEntry) => {
-      const { state } = stateEntry
-      list.push(state)
-    })
-  }
 
   return (
     <AppContainer>
@@ -89,7 +79,7 @@ function App() {
       </div>
 
       <div className={'dropdown-wrapper'}>
-        <Dropdown placeholder={'Select a state...'} list={list} />
+        <Dropdown placeholder={'Select a state...'} />
       </div>
 
     </AppContainer>

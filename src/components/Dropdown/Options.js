@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
+import { DataContext } from '../../providers/Data'
 
 const OptionsContainer = styled.ul`
     margin: 4px 0px 0px 0px;
@@ -37,11 +38,16 @@ const OptionsContainer = styled.ul`
 `
 
 export default function Options(props) {
-    const { openStatus, list } = props
+    const { openStatus } = props
+    const [statesData] = useContext(DataContext)
 
-    let itemList = list.map((stateAbbr) => {
-        return <li key={stateAbbr} value={stateAbbr}>{stateAbbr}</li>
-    })
+    const list = []
+    if (statesData !== null) {
+        statesData.forEach((stateEntry) => {
+        const { state } = stateEntry
+        list.push(state)
+        })
+    }
 
     function setOptionsDisplay(status) {
         if (status === 'closed') {
@@ -55,7 +61,7 @@ export default function Options(props) {
 
     return (
         <OptionsContainer display={displayValue}>
-            {itemList}
+            {list.map((stateAbbr) => <li key={stateAbbr} value={stateAbbr}>{stateAbbr}</li>)}
         </OptionsContainer>
     )
 }

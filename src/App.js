@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import styled from 'styled-components'
 // import { DataContext } from './providers/Data'
 import { AppStateContext } from './providers/AppState'
+import { setStateName } from './utils'
 import { Header } from './components/Header'
 import LocationHeading from './components/LocationHeading'
 import TotalTests from './components/TotalTests'
@@ -59,10 +60,20 @@ const AppContainer = styled.div`
 function App() {
   const [selectedState] = useContext(AppStateContext)
 
+  function setPlaceholder() {
+    if (selectedState === '') {
+      return 'Select a state'
+    } else if (selectedState !== '') {
+      return setStateName(selectedState.state)
+    }
+  }
+
+  let placeholder = setPlaceholder()
+
   return (
     <AppContainer>
       <Header />
-      <LocationHeading headingText={(selectedState === '') ? 'Select a state...' : selectedState.state} />
+      <LocationHeading headingText={(selectedState === '') ? 'Select a state...' : setStateName(selectedState.state)} />
       <TotalTests number={(selectedState === '') ? '0' : selectedState.positiveCasesViral} numberChange={(selectedState === '') ? '0' : selectedState.positiveIncrease} />
       
       <div className={'row-wrapper-one'}>
@@ -76,7 +87,7 @@ function App() {
       </div>
 
       <div className={'dropdown-wrapper'}>
-        <Dropdown placeholder={'Select a state...'} />
+        <Dropdown placeholder={placeholder} />
       </div>
 
     </AppContainer>

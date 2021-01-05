@@ -11,7 +11,7 @@ const DropdownContainer = styled.div`
 `
 
 export default function Dropdown(props) {
-    const [selectedState, setSelectedState] = useContext(AppStateContext)
+    const [, setSelectedState] = useContext(AppStateContext)
     const [statesData] = useContext(DataContext)
     const [isOpen, setIsOpen] = useState('closed')
     const { placeholder } = props
@@ -46,6 +46,8 @@ export default function Dropdown(props) {
                 setSelectedState(() => {
                     return {...newObj}
                 })
+
+                toggleListDisplay()
             }
         })
     }

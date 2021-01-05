@@ -1,9 +1,7 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
-// import { DataContext } from './providers/Data'
 import { AppStateContext } from './providers/AppState'
 import { setStateName } from './utils'
-import { Header } from './components/Header'
 import LocationHeading from './components/LocationHeading'
 import TotalTests from './components/TotalTests'
 import InfoBlock from './components/InfoBlock'
@@ -72,7 +70,6 @@ function App() {
 
   return (
     <AppContainer>
-      <Header />
       <LocationHeading headingText={(selectedState === '') ? 'Select a state...' : setStateName(selectedState.state)} />
       <TotalTests number={(selectedState === '') ? '0' : selectedState.positiveCasesViral} numberChange={(selectedState === '') ? '0' : selectedState.positiveIncrease} />
       

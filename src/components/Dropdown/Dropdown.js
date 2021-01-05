@@ -16,8 +16,6 @@ export default function Dropdown(props) {
     const [isOpen, setIsOpen] = useState('closed')
     const { placeholder } = props
 
-    // console.log(selectedState)
-
     function toggleListDisplay() {
         if (isOpen === 'closed') {
             setIsOpen(() => 'open')

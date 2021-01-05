@@ -30,11 +30,17 @@ export default function Dropdown(props) {
         statesData.forEach((stateEntry) => {
             const { state } = stateEntry
             if (state === e.target.id) {
-                const { positiveCasesViral, positiveIncrease } = stateEntry
+                const { positiveCasesViral, positiveIncrease, hospitalizedCurrently, hospitalizedIncrease, inIcuCurrently, death, deathIncrease, recovered } = stateEntry
                 const newObj = {
                     state: state,
                     positiveCasesViral: positiveCasesViral,
-                    positiveIncrease: positiveIncrease
+                    positiveIncrease: positiveIncrease,
+                    hospitalized: hospitalizedCurrently,
+                    hospitalizedIncrease: hospitalizedIncrease,
+                    icu: inIcuCurrently,
+                    death: death,
+                    deathIncrease: deathIncrease,
+                    recovered: recovered
                 }
                 
                 setSelectedState(() => {

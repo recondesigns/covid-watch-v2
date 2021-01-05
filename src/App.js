@@ -62,17 +62,17 @@ function App() {
   return (
     <AppContainer>
       <Header />
-      <LocationHeading headingText={(selectedState === null) ? 'Select a state...' : selectedState.state} />
-      <TotalTests number={(selectedState === null) ? '0' : selectedState.positiveCasesViral} numberChange={(selectedState === null) ? '0' : selectedState.positiveIncrease} />
+      <LocationHeading headingText={(selectedState === '') ? 'Select a state...' : selectedState.state} />
+      <TotalTests number={(selectedState === '') ? '0' : selectedState.positiveCasesViral} numberChange={(selectedState === '') ? '0' : selectedState.positiveIncrease} />
       
       <div className={'row-wrapper-one'}>
-        <InfoBlock label={'Label'} number={'999,888,999'} numberChange={'999,999,000'} />
-        <InfoBlock label={'Label'} number={'999,888,999'} numberChange={'999,999,000'} />
+        <InfoBlock label={'Hospitalized'} number={(selectedState === '') ? '0' : selectedState.hospitalized} numberChange={(selectedState === '') ? '0' : selectedState.hospitalizedIncrease} />
+        <InfoBlock label={'In ICU'} number={(selectedState === '') ? '0' : selectedState.icu} numberChange={(selectedState === '' ? '' : '')} />
       </div>
 
       <div className={'row-wrapper-two'}>
-        <InfoBlock label={'Label'} number={'999,888,999'} numberChange={'999,999,000'} />
-        <InfoBlock label={'Label'} number={'999,888,999'} numberChange={'999,999,000'} />
+        <InfoBlock label={'Recovered'} number={(selectedState === '') ? '0' : selectedState.recovered} numberChange={(selectedState === '') ? '' : ''} />
+        <InfoBlock label={'Death'} number={(selectedState === '') ? '0' : selectedState.death} numberChange={(selectedState === '') ? '0' : selectedState.deathIncrease} />
       </div>
 
       <div className={'dropdown-wrapper'}>

@@ -57,7 +57,6 @@ const AppContainer = styled.div`
 
 function App() {
   const [statesData] = useContext(DataContext)
-
   const list = []
 
   if (statesData !== null) {
@@ -66,14 +65,6 @@ function App() {
       list.push(state)
     })
   }
-
-  function handleStateDropdown() {
-    alert('fired')
-  }
-
-  // function handleCountyDropdown() {
-  //   alert('County dropdown fired')
-  // }
 
   return (
     <AppContainer>
@@ -92,8 +83,7 @@ function App() {
       </div>
 
       <div className={'dropdown-wrapper'}>
-        <Dropdown handleClick={() => handleStateDropdown()} placeholder={'Select a state...'} list={list} />
-        {/* <Dropdown handleClick={() => handleCountyDropdown()} placeholder={'Select a county...'} /> */}
+        <Dropdown placeholder={'Select a state...'} list={list} />
       </div>
 
     </AppContainer>

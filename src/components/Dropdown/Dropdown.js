@@ -1,6 +1,5 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { DataContext } from '../../providers/Data'
 import Select from './Select'
 import Options from './Options'
 
@@ -10,32 +9,11 @@ const DropdownContainer = styled.div`
 `
 
 export default function Dropdown(props) {
-    const [statesData] = useContext(DataContext)
-    const { handleClick, placeholder, list } = props
-    // console.log(list)
-
-
-
-
-
-    // let tempName = statesData.map((stateEntry) => {
-        
-    //     const { state } = stateEntry
-    //     return state
-    // })
-    
-    // console.log(tempName)
-
-
-
-
-
-    
-
+    const { placeholder, list } = props
 
     return (
         <DropdownContainer>
-            <Select handleClick={handleClick} placeholder={placeholder} />
+            <Select placeholder={placeholder} />
             <Options openStatus={'open'} list={list} />
         </DropdownContainer>
     )

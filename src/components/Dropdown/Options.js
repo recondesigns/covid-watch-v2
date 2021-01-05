@@ -40,10 +40,8 @@ export default function Options(props) {
     const { openStatus, list } = props
 
     let itemList = list.map((stateAbbr) => {
-        console.log(stateAbbr)
         return <li key={stateAbbr} value={stateAbbr}>{stateAbbr}</li>
     })
-    console.log(itemList)
 
     function setOptionsDisplay(status) {
         if (status === 'closed') {
@@ -58,12 +56,6 @@ export default function Options(props) {
     return (
         <OptionsContainer display={displayValue}>
             {itemList}
-            {/* <li>Utah</li>
-            <li>Texas</li>
-            <li>Utah</li>
-            <li>Texas</li>
-            <li>Utah</li>
-            <li>Texas</li> */}
         </OptionsContainer>
     )
 }
